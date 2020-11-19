@@ -1,0 +1,832 @@
+/*font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*---------------header-banner css starts here---------------*/
+header{
+    background-image: url(../images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.navbar{
+    padding: 0;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #ffffff;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    padding: 30px 0;
+    margin: 0 10px;
+    position: relative;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #f39c12;
+}
+
+.navbar-light .navbar-nav .nav-link::before{    /*any before after needs height-weight & background color to work. left right top bottom is used to control content*/
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background-color: #f39c12;
+    left: 0;
+    bottom: -3px;
+    transition: .4s all ease-in-out;    /*transition gives an effect of animation*/
+}
+.navbar-light .navbar-nav .nav-link::after{    /*any before after needs height-weight & background color to work. left right top bottom is used to control content*/
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background-color: #f39c12;
+    right: 0;
+    bottom: -3px;
+    transition: .4s all ease-in-out;    /*transition gives an effect of animation*/
+}
+.navbar-light .navbar-nav .nav-link:hover::before{  /*before will be activated only when link is hovered*/
+    width: 50%;
+}
+.navbar-light .navbar-nav .nav-link:hover::after{  /*before will be activated only when link is hovered*/
+    width: 50%;
+}
+.menu-background{
+    background-color: rgba(0, 0, 0, 0.460);
+}
+.form-inline{   /*not working!-_-*/
+    display: flex;
+    justify-content: space-between;
+}
+.btn-warning{
+    background-color: #f39c12;
+    border-color: #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+.btn-warning:hover{
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #f39c12;
+    border-color: #ffffff;
+}
+.box{
+    padding: 120px 0;   
+}
+.title{
+    text-align: right;
+    vertical-align: center;
+    padding: 150px 50px;
+}
+.title h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #f39c12;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.title h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.buttons{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.btn-started{
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    transition: .4s all ease-in-out;
+}
+.btn-started:hover{
+    background-color: #f39c12;
+    color: #ffffff;
+    border: 2px solid #f39c12;
+}
+.btn-portfolio{
+    border: 2px solid #f39c12;
+    background-color: #f39c12;
+    border-radius: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    transition: .4s all ease-in-out;
+}
+.btn-portfolio:hover{
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+/*---------------header-banner css ends here---------------*/
+
+/*---------------about me css starts here---------------*/
+.about-me{
+    margin: 80px 0;
+}
+.about-content{
+
+}
+.about-content h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #383838;
+}
+.about-content span{
+    display: block;
+    height: 1px;
+    width: 60%;
+    background-color: #f39c12;
+    margin: auto;
+    margin-bottom: 100px;
+
+    position: relative;
+    transition: .4s all ease-in-out;
+}
+.about-content span::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 5px;
+    width: 30px;
+    background-color: #f39c12;
+    animation: slider-anim 5s linear infinite;
+    /*animation-direction: alternate;*/
+}
+@keyframes slider-anim{
+    0%{
+        left: 50%;
+    }
+    25%{
+        left: 70%;
+    }
+    50%{
+        left: 50%;
+    }
+    75%{
+        left: 30%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+.about-content p{
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #383838;
+}
+.bar{
+    padding-top: 80px;
+}
+.bar h5{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #383838;
+}
+.progress{
+    border-radius: 0;
+    height: 10px;
+    width: 80%;
+    
+}
+.progress-bar{
+    background-color: #f39c12;
+    transition: within .6s ease;
+}
+.progress-percentage{
+    position: relative;
+    margin: 10px 0;
+    padding-bottom: 10px;
+}
+.percent{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+.badge-percentage{
+    background-color: #f39c12;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 0;
+
+    position: relative;
+}
+.badge-percentage::after{
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: #f39c12;
+    left: -4px;
+    top: 20%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+/*
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent; 
+    border-right:9px solid #f39c12;
+
+    position: absolute;
+    right: 7.5%;
+    top: -8px;
+    transform: translate(-7.5%, 8px);
+    
+}
+*/
+.content-margin{
+    padding: 0 80px;
+}
+/*---------------about me css ends here---------------*/
+
+/*---------------my service css starts here---------------*/
+.service-content{
+    border: 1px solid #efefef;
+    margin: 0;
+    padding: 40px 0;
+    transition: .2s all ease-in-out;
+
+    position: relative;
+}
+.service-content:hover{
+    background-color: #f39c12;
+    border: transparent; 
+}
+.service-content h5{
+    color: #6e6e6e;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 10px;
+    transition: .2s all ease-in-out;
+}
+.service-content p{
+    color: #6b6b6b;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: .2s all ease-in-out;
+    margin: 0;
+}
+.service-content:hover h5, .service-content:hover p{
+    color: #ffffff;
+}
+.icon{
+    height: 90px;
+    width: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    border: 1px solid #919190;
+    background-color: #919190;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    transition: .2s all ease-in-out;
+}
+.service-content:hover .icon{
+    background-color: #ffffff;
+    color: #f39c12;
+    border: transparent;
+}
+.service-content::before{
+    position: absolute;
+    content: '';
+
+    width: 0;
+    height: 0;
+    border-top: 100px solid #ffffff;
+    border-right: 100px solid transparent;
+
+    left: 0;
+    top: 0;
+}
+.service-content::after{
+    position: absolute;
+    content: '';
+
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+
+    left: 0;
+    top: 0;
+
+    transition: .2s all ease-in-out;
+}
+.service-content:hover::after{
+    border-top: 2px solid #f39c12;
+    border-left: 2px solid #f39c12;
+}
+.service{
+    margin-bottom: 80px;
+}
+
+/*---------------my service css ends here---------------*/
+
+
+/*---------------my statistic css starts here---------------*/
+.statistic{
+    background-image: url(../images/statistics-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+
+    padding: 80px 0;
+}
+.stat{
+    
+}
+.stat h1{
+    color: #ffffff;
+}
+.stat_content{
+
+}
+.stat_icon{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px;
+    color: #f39c12;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.stat_content h1{
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 15px;
+}
+.stat_content h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+.stat-line{
+    position: relative;
+}
+.stat-line span{
+    display: block;
+    height: 3px;
+    width: 60%;
+    background-color: #ffffff;
+    margin: auto;
+    margin-bottom: 100px;
+
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*---------------my statistic css ends here---------------*/
+
+/*---------------my work css starts here---------------*/
+.work{
+    margin: 80px 0;
+}
+/*filter gallery css start*/
+
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    
+}
+/*filter gallery css end*/
+
+.btn-default{
+    border: transparent;
+    color: #565656;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.btn-default:hover{
+    background-color: #f39c12;
+    border: transparent;
+}
+.btn-default:focus{
+    background-color: #f39c12;
+    border: transparent;
+    color: #ffffff;
+    /*outline: none;*/
+    box-shadow: none;
+}
+.gallery_product{
+    position: relative;
+}
+.project{
+    background-color: #232323;
+    padding-left: 10px;
+
+    position: relative;
+    bottom: 60px;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+.gallery_product:hover .project{
+    opacity: 1;
+    bottom: 65px;
+}
+.project h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 10px;
+}
+.project p{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #b5b4b4;
+    text-transform: capitalize;
+}
+.search-icon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #f39c12;
+    background-color: #f39c12;
+    border-radius: 50%;
+    margin: auto;
+
+    position: absolute;
+    top: -10px;
+    right: 25px;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+.gallery_product:hover .search-icon{
+    top: 10px;
+    right: 25px;
+    opacity: 1;
+}
+
+/*---------------my work css ends here---------------*/
+
+
+/*---------------recent story css starts here---------------*/
+.recent{
+    padding-bottom: 80px;
+}
+.story-border{
+    border: 1px solid #b5b4b4;
+}
+    
+.story-content{
+    
+    padding-top: 50px;
+}
+.story-img{
+    width: 100%;
+    height: 100%;
+}
+.story-content p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7d7d;
+    text-transform: capitalize;
+}
+.story-content h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f39c12;
+    text-transform: capitalize;
+}
+.story-content .btn-more{
+    border: transparent;
+    background-color: #282828;
+    border-radius: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: .4s all ease-in-out;
+}
+.btn-more:hover{
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+/*---------------recent story css ends here---------------*/
+
+/*---------------life story css starts here---------------*/
+.life{
+    background-color: #262626;
+    padding: 80px 0;
+}
+.life-content{
+    
+    padding-top: 50px;
+}
+.life-content p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #c7c7c7;
+    text-transform: capitalize;
+}
+/*---------------life story css ends here---------------*/
+
+/*---------------life story css ends here---------------*/
+.feedback{
+    padding: 80px 0;
+}
+.quote{
+    padding: 20px;
+    border: 1px solid #f6f6f6;
+    background-color: #f6f6f6;
+}
+.quote h5{
+    color: #696868;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.quote p{
+    color: #838282;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.quote::after{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    background-color: #f39c12;
+    left: 100px;
+    top: 52%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.client{
+    display: flex;
+    padding: 30px 0;
+    padding-left: 55px;
+   
+}
+.designation{
+    margin-left: 20px;
+}
+.designation h5{
+    color: #f39c12;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.designation h6{
+    color: #696868;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+/*---------------life story css ends here---------------*/
+
+/*---------------tweet css starts here---------------*/
+.tweet{
+    background-image: url(../images/background-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+
+    padding: 80px 0;
+}
+.text-decor{
+
+}
+.text-decor p{
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+}
+/*---------------tweet css ends here---------------*/
+
+
+/*---------------get in touch css starts here---------------*/
+.get-in-touch{
+    padding: 80px 0;
+}
+.half-fields{
+    display: flex;
+    justify-content: space-between;
+}
+.form-control{
+    border: none;
+    border-bottom: 2px solid #aaaaaa;
+    border-radius: 0;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #616161;
+}
+.form-control:hover{
+    border-bottom: 2px solid #f39c12;
+}
+.form-group{
+    width: 45%;
+}
+.btn-request{
+    border: transparent;
+    background-color: #f39c12;
+    border-radius: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    transition: .4s all ease-in-out;
+}
+.btn-request:hover{
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+/*---------------get in touch css ends here---------------*/
+
+.map{
+    position: relative;
+}
+
+.address1{
+    
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #f39c12;
+    background-color: #f39c12;
+
+    position: absolute;
+    right: 150px;
+    bottom: 150px;
+}
+.address1 p{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #ffffff;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+.follow{
+    padding: 80px 0;
+}
+.footer-item{
+   
+}
+.footer-icon{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.footer-icon i{
+    font-size: 14px;
+    color: #f39c12;
+    height: 30px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+        
+    border: 2px solid #ebebeb;
+    border-radius:0;
+}
+.footer-item p{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.footer-icon i:hover{
+    border: transparent;
+    background-color: #f39c12;
+    color: #ffffff;
+}
+
+.last{
+    background-color: #f39c12;
+}
+.last p{
+    color: #505050;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 20px 0;
+    text-transform: capitalize;
+}
